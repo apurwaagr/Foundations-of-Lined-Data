@@ -1,0 +1,16 @@
+# construct a triple where the player's jersey number increases by 17
+
+# functions
+# https://en.wikibooks.org/wiki/SPARQL/Expressions_and_Functions#DATATYPE
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+CONSTRUCT {?s ?p ?o .}
+WHERE{
+    ?s  ?p1 ?date ;
+        ?p  ?num .
+    FILTER(DATATYPE(?date) = xsd:date)
+    FILTER(DATATYPE(?num) = xsd:integer)
+    BIND((?num + 23) as ?o)
+}

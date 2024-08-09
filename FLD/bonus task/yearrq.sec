@@ -1,0 +1,14 @@
+# return the first 4 characters of the players birthdate
+
+# functions
+# https://en.wikibooks.org/wiki/SPARQL/Expressions_and_Functions#DATATYPE
+# https://en.wikibooks.org/wiki/SPARQL/Expressions_and_Functions#SUBSTR
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?year
+WHERE {
+    ?s  ?p  ?o .
+    FILTER(DATATYPE(?o) = xsd:date)
+    BIND(SUBSTR(STR(?o), 1, 4) AS ?year)
+}

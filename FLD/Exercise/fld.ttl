@@ -1,0 +1,32 @@
+@prefix : <#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Player Triples
+:DerrickRose :name "Derrick Rose"^^xsd:string ;
+    :occupation "Basketball Player" ;
+    :plays_for :MemphisGrizzlies ;
+    :sport_number 25 ;
+    :position "Point Guard" ;
+    :date_of_birth "1988-04-10"^^xsd:date ;
+    :nationality "American" ;
+    :handedness "Right" ;
+    :height [
+        rdf:value "6'3\"" ;
+        :unit "ft"
+    ] ;
+    :weight [
+        rdf:value "200" ;
+        :unit "lbs"
+    ] .
+
+# Team Triples
+:MemphisGrizzlies :plays_in :NBA ;
+    :english_name "Memphis Grizzlies"@en ;
+    :home_venue "FedExForum" .
+
+# Additional Team Triples
+:AnotherTeam :plays_in :NBA ;
+    :english_name "Los Angeles Lakers"@en .
+    
+# League Triples
+:NBA :english_name "National Basketball Association"@en .

@@ -1,0 +1,28 @@
+@prefix :       <#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+:curry :name           "Stephen Curry" ;                      # (a)
+       :occupation     :basketball_player ;                   # (b)
+       :plays_for      :gsw ;                                 # (c)
+       :number         30 ;                                   # (d)
+       :position       :guard ;                               # (e)
+       :date_of_birth  "1988-14-03"^^xsd:date ;               # (f)
+       :nationality    :us ;                                  # (g)
+       :handedness     :rightHandedness ;                     # (h)
+       :height     [                                          # (i)
+           :value  188 ;                                      # (i)
+           :unit   :cm                                        # (i)
+       ] ;                                                    # (i)
+       :weight [                                              # (j)
+           :value  84 ;                                       # (j)
+           :unit   :kg                                        # (j)
+        ] .                                                   # (j)
+
+:gsw   :play_in        :nba ;                                 # (A)
+       :name           "Golden State Warriors"@en ;           # (B)
+       :venue          :oracle_arena .                        # (C)
+
+:nba   :name           "National Basketball Association"@en . # (D)
+
+:lal   :play_in        :nba ;                                 # (E)
+       :name           "Los Angeles Lakers"@en .              # (F)

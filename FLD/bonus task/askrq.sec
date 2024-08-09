@@ -1,0 +1,9 @@
+# return true if the RDF document contains a team with the name "Utah Jazz"
+
+# functions
+# https://en.wikibooks.org/wiki/SPARQL/Expressions_and_Functions#STR
+ASK 
+WHERE{
+    ?s ?p ?label .
+    FILTER(str(?label) = "Utah Jazz")
+}

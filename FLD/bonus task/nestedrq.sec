@@ -1,0 +1,12 @@
+# return the number of triples the RDF document contains.
+
+# function
+# https://en.wikibooks.org/wiki/SPARQL/Expressions_and_Functions#COUNT,_MIN,_MAX,_AVG_and_SUM
+
+SELECT  ?num 
+WHERE {
+    SELECT (COUNT(*) as ?num)
+    {
+        ?s  ?p  ?o .
+    }  
+}

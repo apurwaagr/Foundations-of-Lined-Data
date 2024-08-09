@@ -1,0 +1,10 @@
+# return the absolute value of 91054 * -3 / 33 and round it to the nearest integer
+
+# functions:
+# https://en.wikibooks.org/wiki/SPARQL/Expressions_and_Functions#ROUND
+# https://en.wikibooks.org/wiki/SPARQL/Expressions_and_Functions#ABS
+
+SELECT ?value
+WHERE {
+    BIND(ROUND(ABS(91054 * -3 / 33)) AS ?value)
+}

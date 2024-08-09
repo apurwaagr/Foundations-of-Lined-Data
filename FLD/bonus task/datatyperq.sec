@@ -1,0 +1,12 @@
+#return all RDFLiterals with integer or decimal values
+
+# functions:
+# https://en.wikibooks.org/wiki/SPARQL/Expressions_and_Functions#DATATYPE
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?number
+WHERE {
+    ?s   ?p  ?number .
+    FILTER (datatype(?number) = xsd:integer || datatype(?number) = xsd:decimal)
+}

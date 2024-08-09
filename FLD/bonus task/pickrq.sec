@@ -1,0 +1,9 @@
+#return the the 8. triple after ordering the results by descending subjects and ascending predicates
+
+SELECT  ?s ?p ?o
+WHERE {
+    ?s  ?p  ?o .
+}
+ORDER BY DESC(?s) ASC(?p)
+OFFSET 7
+LIMIT 1
